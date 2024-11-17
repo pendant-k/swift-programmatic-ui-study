@@ -35,7 +35,8 @@ class GFTextField: UITextField {
 
         backgroundColor = .tertiarySystemBackground
         autocorrectionType = .no
-
+//        keyboardType = .emailAddress
+        returnKeyType = .go
         placeholder = "username을 입력해주세요"
     }
 }
