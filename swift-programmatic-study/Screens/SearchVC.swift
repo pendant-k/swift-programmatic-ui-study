@@ -23,6 +23,7 @@ class SearchVC: UIViewController {
         configureTextField()
         configureCallToActionButton()
 
+        // add dismiss keyboard event to full screen
         createDismissKeyboardTapGesture()
     }
 
@@ -34,6 +35,7 @@ class SearchVC: UIViewController {
     // TODO: 블로그 정리
     func createDismissKeyboardTapGesture() {
         let tap = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+
         view.addGestureRecognizer(tap)
     }
 
