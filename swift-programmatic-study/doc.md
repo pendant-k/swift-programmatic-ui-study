@@ -1,6 +1,8 @@
 # Swift Programmatic UI
 
-Screen VC 생성
+전통 구조 : MVC
+
+# Screen VC 생성
 - 각 Screen은 View, View를 관리하는 Controller로 구성됨
 
 VC 내부에서는 subview 들의 configure 함수가 존재함
@@ -23,7 +25,7 @@ VC 내부에서는 subview 들의 configure 함수가 존재함
 
 다음과 같은 configure 함수들을 실행하여 Screen 그려냄. 이때 `view.addSubview()` 매서드를 사용함
 
-## CustomView 작성법
+# CustomView 작성법
 전체 예시 코드
 - init 함수 내부에서 cufigure() 함수 실행
 - configure 함수 내에서 modifier 관련 작업 실행

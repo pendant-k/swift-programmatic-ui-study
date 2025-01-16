@@ -26,7 +26,8 @@ class GFButton: UIButton {
     // 해당 class 내에서만 사용가능
     private func configure() {
         layer.cornerRadius = 10
-        titleLabel?.textColor = .white
+        setTitleColor(.white, for: .normal)
+//        titleLabel?.textColor = .white
         // dynamic type 지원
         titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
 
