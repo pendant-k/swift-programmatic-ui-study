@@ -1,9 +1,4 @@
-//
-//  FollowerListVC.swift
-//  swift-programmatic-study
-//
-//  Created by Donghan Kim on 11/17/24.
-//
+// TODO: Check Result Type on Swift
 
 import UIKit
 
@@ -16,14 +11,15 @@ class FollowerListVC: UIViewController {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
 
-        NetworkManager.shared.getFollowers(for: username, page: 1) { followers, errorMessage in
-            guard let followers = followers else {
-                // Here, self indicates UIViewController itself
-                self.presentGFAlertOnMainThread(title: "Bad Stuff Happen", message: errorMessage!, buttonTitle: "OK")
-                return
-            }
+        NetworkManager.shared.getFollowers(for: username, page: 1) { result in
 
-            print("Followers.count = \(followers.count)")
+            switch result {
+            case .success(let followers):
+                print("Followers.count = \(followers.count)")
+
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Bad Stuff Happen", message: error.rawValue, buttonTitle: "OK")
+            }
         }
     }
 

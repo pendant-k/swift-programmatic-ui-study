@@ -3,7 +3,7 @@
 // TODO: guard let
 
 import Foundation
-
+/// This is basic network manager pattern used in swift environment
 class NetworkManagerV1 {
     // create NetworkManager instance named shared (using it all around)
     static let shared = NetworkManagerV1()
